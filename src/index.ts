@@ -1,1 +1,2 @@
-const hello: String = 'Sergio';
+const hello: String = 'Sergio'
+console.log(hello)
