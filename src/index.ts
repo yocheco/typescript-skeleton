@@ -1,3 +1,3 @@
-const hello: String = 'Tes'
-
-console.log(hello)
+export default function fizzBuzz (number:number) {
+  return number
+}
