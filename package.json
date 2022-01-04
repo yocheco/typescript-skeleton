@@ -1,0 +1,51 @@
+{
+  "name": "typescript-skeleton",
+  "version": "1.0.0",
+  "description": "Developer gh@yocheco",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.ts{,x}",
+    "lint:fix": "eslint src/**/*.ts{,x} --fix",
+    "build": "npm run build:clean && npm run build:tsc && npm run build:di",
+    "build:tsc": "tsc -p tsconfig.prod.json",
+    "build:di": "copy 'src/**/*.{json,yaml,html,png}' dist/src",
+    "build:clean": "rm -r dist; exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yocheco/Typescript-skeleton.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yocheco/Typescript-skeleton/issues"
+  },
+  "homepage": "https://github.com/yocheco/Typescript-skeleton#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.5",
+    "ts-node": "^10.4.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  },
+  "lint-staged": {
+    "{src,tests}/**/*.ts": [
+      "eslint --cache --fix"
+    ]
+  }
+}
