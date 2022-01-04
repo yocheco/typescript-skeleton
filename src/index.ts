@@ -1,2 +1,3 @@
-const hello: String = 'Sergio'
+const hello: String = 'Tes'
+
 console.log(hello)
