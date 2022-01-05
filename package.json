@@ -13,8 +13,8 @@
     "build:tsc": "tsc -p tsconfig.prod.json",
     "build:di": "copy 'src/**/*.{json,yaml,html,png}' dist/src",
     "build:clean": "rm -r dist; exit 0",
-    "test": "jest --verbose",
-    "test:unit": "NODE_ENV=test jest",
+    "test": "npm run test:unit",
+    "test:unit": "NODE_ENV=test jest --verbose",
     "prepare": "husky install"
   },
   "repository": {
