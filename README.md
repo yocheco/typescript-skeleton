@@ -15,7 +15,9 @@ npm run dev
 
 ### Tareas pendientes
 
-- [✓].
+- [ ]. Cucumber test
+- [ ]. Github actions
+- [ ]. Express
 
 ## Codigos git
 
