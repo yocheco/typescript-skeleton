@@ -1,3 +1,7 @@
+<a href="https://github.com/yocheco/typescript-skeleton/actions/workflows/ci.yml">
+    <img src="https://github.com/yocheco/typescript-skeleton/actions/workflows/ci.yml/badge.svg" />
+</a>
+  
 # Typescript-skeleton
 
 Developer gh@yocheco
