@@ -27,4 +27,4 @@ jobs:
           npm test
 
       - name: ✌️ Finish
-        run: echo "Push to - ${{github.orkflow}} by ${{github.actor}}"
+        run: echo "Push to - ${{github.workflow}} by ${{github.actor}}"
