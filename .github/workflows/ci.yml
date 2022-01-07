@@ -1,12 +1,30 @@
-name: First Workflow
+name: Run Test
 
-on : [push]
+on: [push, pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 15.x]
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Hello
-        run: echo "Hello from ${{github.orkflow}} by ${{github.actor}}"
+      - name: 🟢 Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 🔧 Install dependencies npm
+        run: |
+          npm install
+      
+      - name: ✅ Start test npm
+        run: |
+          npm test
+
+      - name: ✌️ Finish
+        run: echo "Push to - ${{github.workflow}} by ${{github.actor}}"
