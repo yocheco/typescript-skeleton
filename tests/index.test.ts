@@ -1,3 +1,4 @@
+// To example
 import fizzBuzz from '../src/index'
 
 describe('First test', () => {
