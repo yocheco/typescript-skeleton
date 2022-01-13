@@ -1,0 +1,4 @@
+services:
+  Apps.api.backend.controllers.StatusGetController:
+    class: ../../controllers/StatusGetController
+    arguments: []
