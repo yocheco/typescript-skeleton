@@ -19,9 +19,15 @@ npm run dev
 
 ### Tareas pendientes
 
+- [ ]. Add user
+- [ ]. Token JWT
+
+### Tareas terminadas
+
 - [✓]. Github actions
-- [ ]. Cucumber test
-- [ ]. Express
+- [✓]. Express
+- [✓]. Jest test
+- [✓]. Cucumber test
 
 ## Codigos git
 
