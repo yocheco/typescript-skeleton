@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "dev:api:backend": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/api/backend/start.ts",
+    "dev": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/api/backend/start.ts",
     "lint": "eslint src/**/*.ts{,x}",
     "lint:fix": "eslint src/**/*.ts{,x} --fix",
     "build": "npm run build:clean && npm run build:tsc && npm run build:di",
@@ -54,6 +54,7 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
+    "bson": "^4.6.1",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",

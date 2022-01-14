@@ -2,3 +2,7 @@ services:
   Apps.api.backend.controllers.StatusGetController:
     class: ../../controllers/StatusGetController
     arguments: []
+  
+  Apps.api.backend.controllers.UsersPutController:
+    class: ../../controllers/UsersPutController
+    arguments: ["@Api.Users.application.UserCreator"]

@@ -1,0 +1,8 @@
+services:
+  Api.Users.application.UserCreator:
+    class: ../../../../../Contexts/Api/Users/application/UserCreator
+    arguments: ["@Api.Users.domain.UserRepository"]
+  
+  Api.Users.domain.UserRepository:
+    class: ../../../../../Contexts/Api/Users/infrastructure/persistence/FileUserRepository
+    arguments: []
