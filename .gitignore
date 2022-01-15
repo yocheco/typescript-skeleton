@@ -7,3 +7,4 @@ test-results.xml
 .eslintcache
 coverage
 *.ignore
+.vscode
