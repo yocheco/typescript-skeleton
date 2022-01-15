@@ -4,14 +4,16 @@ import { UserCreator } from '../../../../Contexts/Api/Users/application/UserCrea
 import httpStatus from 'http-status'
 
 export default class UsersPutController implements Controller {
-  constructor (private userCreator: UserCreator) {}
+  private readonly userCreator: UserCreator
+
+  constructor (userCreator: UserCreator) {
+    this.userCreator = userCreator
+  }
 
   async run (req: Request, res: Response): Promise<void> {
-    const { name, email, passwor } = req.body
+    const { name, email, password } = req.body
     const { id } = req.params
-
-    await this.userCreator.run(id, name, email, passwor)
-
+    await this.userCreator.run({ id, name, email, password })
     res.status(httpStatus.CREATED).send()
   }
 }
