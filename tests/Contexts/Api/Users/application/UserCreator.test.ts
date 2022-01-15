@@ -18,7 +18,7 @@ describe('UserCreator', () => {
 
     const expectedUser = new User(id, name, email, password)
 
-    await creator.run(id, name, email, password)
+    await creator.run({ id, name, email, password })
 
     repository.assertSaveHaveBeenCalledWith(expectedUser)
   })
