@@ -1,14 +1,15 @@
 import { UserCreator } from '../../../../../src/Contexts/Api/Users/application/UserCreator'
 import { User } from '../../../../../src/Contexts/Api/Users/domain/User'
-import { UserRepository } from '../../../../../src/Contexts/Api/Users/domain/UserRepository'
+import { UserRepositoryMock } from '../__mocks__/UserRepositoryMock'
 
 describe('UserCreator', () => {
+  let repository: UserRepositoryMock
+
+  beforeEach(() => {
+    repository = new UserRepositoryMock()
+  })
+
   it('should create a valid user', async () => {
-    const repository: UserRepository = {
-      save: jest.fn()
-
-    }
-
     const creator = new UserCreator(repository)
     const id = 'id'
     const name = 'Sergio'
@@ -19,6 +20,6 @@ describe('UserCreator', () => {
 
     await creator.run(id, name, email, password)
 
-    expect(repository.save).toHaveBeenCalledWith(expectedUser)
+    repository.assertSaveHaveBeenCalledWith(expectedUser)
   })
 })
