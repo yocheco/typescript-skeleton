@@ -19,7 +19,7 @@ npm run dev
 
 ### Tareas pendientes
 
-- [ ]. Add user
+- [ ]. Add user - https://pro.codely.tv/library/ddd-en-typescript-modelado-y-arquitectura-172533/375662/path/step/149490360/
 - [ ]. Token JWT
 
 ### Tareas terminadas
