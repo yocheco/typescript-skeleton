@@ -17,7 +17,7 @@ describe('UserCreator', () => {
     const email = 'sergio@demo.com'
     const password = '123456'
 
-    const expectedUser = new User(new Uuid(id), name, email, password)
+    const expectedUser = new User({ id: new Uuid(id), name: name, email: email, password: password })
 
     await creator.run({ id, name, email, password })
 

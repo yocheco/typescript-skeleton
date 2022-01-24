@@ -15,7 +15,7 @@ export class FileUserRepository implements UserRepository {
   async search (userId: string): Promise<User> {
     const userData = await fs.promises.readFile(this.filePath(userId))
     const { id, name, email, password } = deserialize(userData)
-    return new User(id, name, email, password)
+    return new User({ id: id, name: name, email: email, password: password })
   }
 
   private filePath (id: string): string {
