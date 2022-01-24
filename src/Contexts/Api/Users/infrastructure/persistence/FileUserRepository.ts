@@ -9,7 +9,7 @@ export class FileUserRepository implements UserRepository {
   private FILE_PATH = path.join(__dirname, 'user').toString()
 
   save (user: User): Promise<void> {
-    return fs.promises.writeFile(this.filePath(user.id), serialize(user))
+    return fs.promises.writeFile(this.filePath(user.id.toString()), serialize(user))
   }
 
   async search (userId: string): Promise<User> {
