@@ -1,6 +1,6 @@
 import { Uuid } from '../../../Shared/domain/value-object/Uuid'
 import { User } from '../domain/User'
-import { UserRepository } from '../domain/UserRepository'
+import { UserRepository } from '../domain/repositories/UserRepository'
 import { UserCreatorRequest } from './UserCreatorRequest'
 export class UserCreator {
   private readonly repository: UserRepository

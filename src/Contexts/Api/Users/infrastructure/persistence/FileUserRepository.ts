@@ -3,7 +3,7 @@ import { serialize, deserialize } from 'bson'
 import fs from 'fs'
 import path from 'path'
 import { User } from '../../domain/User'
-import { UserRepository } from '../../domain/UserRepository'
+import { UserRepository } from '../../domain/repositories/UserRepository'
 
 export class FileUserRepository implements UserRepository {
   private FILE_PATH = path.join(__dirname, 'user').toString()
