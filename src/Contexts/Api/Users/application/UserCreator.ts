@@ -9,7 +9,7 @@ export class UserCreator {
   }
 
   async run (request: UserCreatorRequest) {
-    const user = new User(new Uuid(request.id), request.name, request.email, request.password)
+    const user = new User({ id: new Uuid(request.id), name: request.name, email: request.email, password: request.password })
 
     return this.repository.save(user)
   }
