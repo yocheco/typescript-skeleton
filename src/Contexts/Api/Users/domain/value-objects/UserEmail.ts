@@ -1,2 +1,2 @@
-import { StringValueObject } from '../../../../Shared/domain/value-object/StringValueObject'
-export class UserEmail extends StringValueObject {}
+import { EmailValueObject } from '../../../../Shared/domain/value-object/EmailValueObject'
+export class UserEmail extends EmailValueObject {}
