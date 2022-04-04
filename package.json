@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "dev-auth": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/auth/start.ts",
-    "dev": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/api/backend/start.ts",
+    "dev:auth": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/auth/start.ts",
+    "dev:api": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/apps/api/backend/start.ts",
     "lint": "eslint src/**/*.ts{,x}",
     "lint:fix": "eslint src/**/*.ts{,x} --fix",
     "build": "npm run build:clean && npm run build:tsc && npm run build:di",
@@ -17,8 +17,9 @@
     "build:clean": "rm -r dist; exit 0",
     "test": "npm run test:unit && npm run test:features",
     "test:unit": "NODE_ENV=test jest ./test",
-    "test:features": "npm run test:api:backend:features",
+    "test:features": "npm run test:api:backend:features && npm run test:auth:features",
     "test:api:backend:features": "NODE_ENV=test cucumber-js -p apiBackend",
+    "test:auth:features": "NODE_ENV=test cucumber-js -p auth",
     "prepare": "husky install"
   },
   "repository": {

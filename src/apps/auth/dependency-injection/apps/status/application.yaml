@@ -1,0 +1,4 @@
+services:
+  Apps.auth.controllers.status.StatusGetController:
+    class: ../../../controllers/status/StatusGetController
+    arguments: []
