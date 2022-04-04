@@ -8,10 +8,12 @@ Developer gh@yocheco
 
 ## Getting Started
 
-### run dev
+### Run dev
+#### Auth Service
+port: 5000
 ```
 npm install
-npm run dev
+npm run dev-auth
 
 ```
 
